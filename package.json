@@ -1,11 +1,30 @@
 {
   "name": "bangplad-invite-backend",
+<<<<<<< HEAD
   "version": "0.0.1",
   
+=======
+  "version": "1.0.0",
+  "main": "index.ts",
+>>>>>>> parent of 2d6a825 (Update package.json)
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.ts"
   },
+<<<<<<< HEAD
  
+=======
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vichayabhas/bangplad-invite-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vichayabhas/bangplad-invite-backend/issues"
+  },
+  "homepage": "https://github.com/vichayabhas/bangplad-invite-backend#readme",
+>>>>>>> parent of 2d6a825 (Update package.json)
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
