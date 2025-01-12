@@ -1,20 +1,11 @@
 {
   "name": "bangplad-invite-backend",
   "version": "0.0.1",
-  "main": "index.ts",
+  
   "scripts": {
     "dev": "nodemon index.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vichayabhas/bangplad-invite-backend.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vichayabhas/bangplad-invite-backend/issues"
-  },
-  "homepage": "https://github.com/vichayabhas/bangplad-invite-backend#readme",
+ 
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
