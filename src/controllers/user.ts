@@ -24,7 +24,7 @@ export async function signId(req: express.Request, res: express.Response) {
   const salt = await bcrypt.genSalt(10);
   const text = await bcrypt.hash(email, salt);
   const token=jwt.sign({ password: text }, buf)
-  sendingEmail(email, token);
+ await sendingEmail(email, token);
   res.status(200).json({token})
 }
 export async function verifyEmail(req: express.Request, res: express.Response) {
