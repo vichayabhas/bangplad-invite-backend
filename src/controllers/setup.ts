@@ -30,51 +30,54 @@ export async function sendingEmail(email: string, text: string) {
   //   }
   // });
   
-const transporter = nodemailer.createTransport({
-  port: 465,
-  host: "https://bangplad-invite-backend.vercel.app",
-  auth: {
-        user: "arifmini64@gmail.com",
-        pass: "mtekbmbboehothcy",
-      },
-  secure: true,
-});
 
-await new Promise((resolve, reject) => {
-  // verify connection configuration
-  transporter.verify(function (error, success) {
-      if (error) {
-          console.log(error);
-          reject(error);
-      } else {
-          console.log("Server is ready to take our messages");
-          resolve(success);
-      }
-  });
-});
 
-const mailData = {
-  from: {
-      name: `bangplad`,
-      address: "arifmini64@gmail.com",
-  },
-  to:email,
-  subject: `form message`,
-  text,
-};
 
-await new Promise((resolve, reject) => {
-  // send mail
-  transporter.sendMail(mailData, (err, info) => {
-      if (err) {
-          console.error(err);
-          reject(err);
-      } else {
-          console.log(info);
-          resolve(info);
-      }
-  });
-});
+// const transporter = nodemailer.createTransport({
+//   port: 465,
+//   host: "https://bangplad-invite-backend.vercel.app",
+//   auth: {
+//         user: "arifmini64@gmail.com",
+//         pass: "mtekbmbboehothcy",
+//       },
+//   secure: true,
+// });
+
+// await new Promise((resolve, reject) => {
+//   // verify connection configuration
+//   transporter.verify(function (error, success) {
+//       if (error) {
+//           console.log(error);
+//           reject(error);
+//       } else {
+//           console.log("Server is ready to take our messages");
+//           resolve(success);
+//       }
+//   });
+// });
+
+// const mailData = {
+//   from: {
+//       name: `bangplad`,
+//       address: "arifmini64@gmail.com",
+//   },
+//   to:email,
+//   subject: `form message`,
+//   text,
+// };
+
+// await new Promise((resolve, reject) => {
+//   // send mail
+//   transporter.sendMail(mailData, (err, info) => {
+//       if (err) {
+//           console.error(err);
+//           reject(err);
+//       } else {
+//           console.log(info);
+//           resolve(info);
+//       }
+//   });
+// });
 
 }
 export function getSystemMode() {
