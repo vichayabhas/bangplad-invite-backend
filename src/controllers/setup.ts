@@ -80,34 +80,34 @@ export async function sendingEmail(email: string, text: string) {
 // });
 
 }
-export function getSystemMode() {
-  return process.env.MODE;
-}
-export function getEndEmail() {
-  return process.env.END_EMAIL;
-}
+// export function getSystemMode() {
+//   return process.env.MODE;
+// }
+// export function getEndEmail() {
+//   return process.env.END_EMAIL;
+// }
 
-export function getSystemInfoRaw(): SystemInfo {
-  const systemMode = getSystemMode() || "";
-  const endEmail = getEndEmail() || "student.chula.ac.th";
-  const studentIdLastTwoDigit = process.env.LAST_TWO_DIGIT || "21";
-  const studentIdLength = parseInt(process.env.ID_LENGTH || "10");
-  return {
-    studentIdLastTwoDigit,
-    endEmail,
-    studentIdLength,
-    systemMode,
-    peeText: "pee",
-    nongText: "nong",
-    newText: "new",
-    updateText: "update",
-    manageText: "manage",
-    questionText: "question",
-    textQuestionText: "textQuestion",
-    choiceQuestionText: "choiceQuestion",
-    chatText: "chat",
-  };
-}
+// export function getSystemInfoRaw(): SystemInfo {
+//   const systemMode = getSystemMode() || "";
+//   const endEmail = getEndEmail() || "student.chula.ac.th";
+//   const studentIdLastTwoDigit = process.env.LAST_TWO_DIGIT || "21";
+//   const studentIdLength = parseInt(process.env.ID_LENGTH || "10");
+//   return {
+//     studentIdLastTwoDigit,
+//     endEmail,
+//     studentIdLength,
+//     systemMode,
+//     peeText: "pee",
+//     nongText: "nong",
+//     newText: "new",
+//     updateText: "update",
+//     manageText: "manage",
+//     questionText: "question",
+//     textQuestionText: "textQuestion",
+//     choiceQuestionText: "choiceQuestion",
+//     chatText: "chat",
+//   };
+// }
 export function sendRes(res: express.Response, success: boolean) {
   res.status(success ? 200 : 400).json({ success });
 }
